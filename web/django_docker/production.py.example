@@ -1,0 +1,49 @@
+from settings import *
+
+DEBUG = False
+
+SECRET_KEY = 'Generate new key using http://www.miniwebtool.com/django-secret-key-generator/'
+
+ALLOWED_HOSTS = []
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'django_db',
+        'USER': 'django',
+        'PASSWORD': 'password',
+        'HOST': 'db',
+        'PORT': 5432,
+    }
+}
+
+INSTALLED_APPS += []
+
+SITE_NAME = 'SITE NAME'
+
+LANGUAGES = (
+    ('id', 'Indonesian'),
+)
+
+LANGUAGE_CODE = 'id'
+
+TIME_ZONE = 'Asia/Jakarta'
+
+USE_TZ = False
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_HOST_USER = 'foo@gmail.com'
+
+EMAIL_HOST_PASSWORD = 'password'
+
+EMAIL_PORT = 587
+
+EMAIL_USE_TLS = True
+
+SERVER_EMAIL = EMAIL_HOST_USER
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER # Set this to admin's contact email

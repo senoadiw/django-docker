@@ -1,0 +1,9 @@
+*.pyc
+*.log
+*.pid
+*.sqlite3
+web/django_docker/static/*
+web/django_docker/components/*
+web/django_docker/uploaded/*
+web/django_docker/local_settings.py
+web/django_docker/production.py

@@ -1,0 +1,18 @@
+version: '2'
+services:
+    db:
+        build: ./db
+        ports:
+            - "8432:5432"
+    redis:
+        image: redis:3.0
+    web:
+        build: ./web
+        command: python manage.py runserver 0.0.0.0:8000
+        volumes:
+            - ./web:/source/
+        ports:
+            - "8000:8000"
+        depends_on:
+            - db
+            - redis

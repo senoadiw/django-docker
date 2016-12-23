@@ -1,0 +1,11 @@
+Django==1.9.12
+psycopg2==2.6.2
+pytz==2016.10
+django-bower==5.2.0
+Pillow==3.4.2
+supervisor==3.3.1
+redis==2.10.5
+django-redis==4.6.0
+rq==0.7.1
+django-rq==0.9.4
+rq-scheduler==0.7.0
