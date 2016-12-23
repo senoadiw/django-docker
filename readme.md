@@ -1,10 +1,12 @@
-Django+PostgreSQL+PostGIS Development With Docker
+**Django+PostgreSQL+PostGIS Development With Docker**
 
 Based on https://docs.docker.com/compose/django/
 
-Based on Docker:
+Built with:
 
-* Docker 1.12.3
+* Win 7 SP1
+* Virtualbox 5.1.12
+* Docker Toolbox 1.12.3
 * image: jedisct1/phusion-baseimage-latest:16.04
 * image: mdillon/postgis:9.6
 * image: redis:3.0
@@ -32,9 +34,11 @@ Other:
 
 First start:
 
-* git clone https://github.com/senoadiw/django_docker.git
-* cd django_docker
+* install Docker from https://www.docker.com/
+* git clone https://github.com/senoadiw/django-docker.git
+* cd django-docker
 * docker-compose build
+* # wait until build complete
 * # run first compose up to create db
 * docker-compose up
 * # press ctrl-c after: database systems are ready to accept connections
@@ -56,3 +60,9 @@ Subsequent starts:
 * docker-machine ip default
 * docker exec -it djangodocker_web_1 bash
 * # open in browser http://dockermachineip:8000
+
+Docker commands:
+
+* docker stop $(docker ps -a -q)
+* destroy all containers
+    * docker rm $(docker ps -a -q)
