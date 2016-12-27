@@ -56,6 +56,8 @@ Subsequent starts:
 
 * cd django_docker
 * docker-compose up -d
+* # or: docker-compose start
+* # below is to access Django's manage.py tool
 * docker-machine ip default
 * docker exec -it djangodocker_web_1 bash
 * # open in browser http://dockermachineip:8000
