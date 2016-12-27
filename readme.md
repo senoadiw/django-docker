@@ -39,16 +39,15 @@ First start:
 * cd django-docker
 * docker-compose build
 * # wait until build complete
-* # run first compose up to create db
-* docker-compose up
-* # press ctrl-c after: database systems are ready to accept connections
+* # first compose up will create new db
 * docker-compose up -d
-* docker-compose ps -a
+* docker-compose ps
 * # run first migration and create superadmin user
 * docker exec -it djangodocker_web_1 bash
     * python manage.py migrate
     * python manage.py createsuperuser
     * exit
+* # get docker default machine IP address
 * docker-machine ls
 * docker-machine ip default
 * # open in browser http://dockermachineip:8000
@@ -61,8 +60,21 @@ Subsequent starts:
 * docker exec -it djangodocker_web_1 bash
 * # open in browser http://dockermachineip:8000
 
-Docker commands:
+Docker Compose commands:
 
-* docker stop $(docker ps -a -q)
-* destroy all containers
-    * docker rm $(docker ps -a -q)
+* (create if not created and) start all containers in background:
+    * docker-compose up -d
+* list container status:
+    * docker-compose ps
+* start all containers:
+    * docker-compose start
+* stop all containers:
+    * docker-compose stop
+    * docker stop $(docker ps -a -q)
+* restart all containers:
+    * docker-compose restart
+    * docker restart $(docker ps -a -q)
+* delete all containers:
+    * # stop containers first
+    * docker-compose rm -f
+    * (WARNING: may delete other unrelated containers): docker rm $(docker ps -a -q)
