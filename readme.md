@@ -78,3 +78,10 @@ Docker Compose commands:
     * # stop containers first
     * docker-compose rm -f
     * (WARNING: may delete other unrelated containers): docker rm $(docker ps -a -q)
+
+PostgreSQL db settings
+
+* db port: 8432 (from host)
+* db name: django_db
+* db role: django
+* db pass: password
