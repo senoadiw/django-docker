@@ -2,12 +2,14 @@ version: '2'
 services:
     db:
         build: ./db
+        env_file: .env
         ports:
             - "8432:5432"
     redis:
         image: redis:3.0
     web:
         build: ./web
+        env_file: .env
         command: python manage.py runserver 0.0.0.0:8000
         entrypoint: ./utils/wait-for-it.sh db:5432 -s -t 60 --
         volumes:
