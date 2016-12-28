@@ -1,4 +1,4 @@
-from settings import *
+# Override settings.py
 
 DEBUG = False
 
