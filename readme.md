@@ -35,6 +35,8 @@ Other:
 First start:
 
 * install Docker from https://www.docker.com/
+* # note: if using Docker Toolbox on Windows, please clone repo in directory under C:\Users
+* # https://docs.docker.com/engine/tutorials/dockervolumes/
 * git clone https://github.com/senoadiw/django-docker.git
 * cd django-docker
 * docker-compose build
@@ -80,6 +82,19 @@ Docker Compose commands:
     * # stop containers first
     * docker-compose rm -f
     * (WARNING: may delete other unrelated containers): docker rm $(docker ps -a -q)
+
+Docker Machine commands:
+
+* list all machines
+    * docker-machine ls
+* start default machine
+    * docker-machine start default
+* stop default machine
+    * docker-machine stop default
+* Delete default machine (WARNING: will delete all images and containers in default machine)
+    * docker-machine rm default
+* Create new default machine using Virtualbox driver with 2GB RAM, 2 CPU, 20GB storage
+    * docker-machine create --driver virtualbox --virtualbox-memory 2048 --virtualbox-cpu-count 2 --virtualbox-disk-size 20480 default
 
 PostgreSQL db settings
 
