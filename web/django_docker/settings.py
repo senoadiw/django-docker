@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'eq#o9dwqgqum#i+v#l@^2f&#$7fe_bz6@k()(7i)49&2#es_%t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -123,6 +123,7 @@ STATIC_URL = '/static/'
 ###############################################################################
 # START OVERRIDE HERE
 ###############################################################################
+SECRET_KEY = os.environ['SECRET_KEY']
 
 DEBUG = True
 
