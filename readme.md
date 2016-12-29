@@ -35,8 +35,10 @@ Other:
 First start:
 
 * install Docker from https://www.docker.com/
-* # note: if using Docker Toolbox on Windows, please clone repo in directory under C:\Users
-* # https://docs.docker.com/engine/tutorials/dockervolumes/
+* # note: consider installing Docker machines on largest OS partition => http://stackoverflow.com/a/37246965/5551336
+* # note: if using Docker Toolbox on Windows, please clone repo in directory under C:\Users => https://docs.docker.com/engine/tutorials/dockervolumes/
+* # note: if using Docker Toolbox on Windows, add COMPOSE_CONVERT_WINDOWS_PATHS to system environment variable => http://stackoverflow.com/a/41320171/5551336
+* cd path/to/source/dir/under/c/users
 * git clone https://github.com/senoadiw/django-docker.git
 * cd django-docker
 * docker-compose build
